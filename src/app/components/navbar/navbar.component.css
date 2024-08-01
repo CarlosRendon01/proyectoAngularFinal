@@ -1,0 +1,54 @@
+.custom-toolbar {
+  background-color: #8B4513;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: width 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.brand-name {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #f5f5dc; 
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.user-icon {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin-left: 10px;
+}
+
+.user-name {
+  color: #f5f5dc;
+  margin-right: 10px;
+}
+
+.mat-menu-item {
+  display: flex;
+  align-items: center;
+}
+
+.mat-menu-item mat-icon {
+  margin-right: 8px;
+}

@@ -1,0 +1,19 @@
+<h2 mat-dialog-title>Información del Carro</h2>
+<mat-dialog-content>
+  <div class="carro-info">
+    <div class="carro-image-container">
+      <img *ngIf="data.imagen" [src]="data.imagen" alt="Car Image" class="carro-image">
+      <img *ngIf="!data.imagen" src="default-image-url" alt="Default Car Image" class="carro-image">
+    </div>
+    <div class="carro-details">
+      <p><strong>Modelo:</strong> {{ data.modelo }}</p>
+      <p><strong>Agencia:</strong> {{ data.agencia }}</p>
+      <p><strong>Color:</strong> {{ data.color }}</p>
+      <p><strong>Precio:</strong> {{ data.precio | currency }}</p>
+      <p><strong>Descripción:</strong> {{ data.descripcion }}</p>
+    </div>
+  </div>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-raised-button color="primary" (click)="onClose()">Cerrar</button>
+</mat-dialog-actions>

@@ -1,0 +1,46 @@
+<div class="container-fluid d-flex justify-content-center align-items-center vh-100" style="background-image: url('/assets/fondoYa.png'); background-size: cover; background-position: center;">
+  <div class="card shadow-lg p-3 mb-5 rounded">
+    <div class="card-body">
+      <h2 class="card-title text-center">Registrar Nuevo Usuario</h2>
+      <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+        <div class="mb-3">
+          <label for="nameUser" class="form-label">Nombre de Usuario</label>
+          <input type="text" class="form-control" id="nameUser" placeholder="Nombre" formControlName="nameUser">
+          <div *ngIf="registerForm.get('nameUser')?.invalid && registerForm.get('nameUser')?.touched" class="text-danger">
+            <small *ngIf="registerForm.get('nameUser')?.errors?.['required']" class="error-message">El nombre es requerido.</small>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="email" class="form-label">Correo Electrónico</label>
+          <input type="email" class="form-control" id="email" placeholder="correo@example.com" formControlName="email">
+          <div *ngIf="registerForm.get('email')?.invalid && registerForm.get('email')?.touched" class="text-danger">
+            <small *ngIf="registerForm.get('email')?.errors?.['required']" class="error-message">El email es requerido.</small>
+            <small *ngIf="registerForm.get('email')?.errors?.['email']" class="error-message">El email no es válido.</small>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="password" class="form-label">Contraseña</label>
+          <input type="password" class="form-control" id="password" placeholder="********" formControlName="password">
+          <div *ngIf="registerForm.get('password')?.invalid && registerForm.get('password')?.touched" class="text-danger">
+            <small *ngIf="registerForm.get('password')?.errors?.['required']" class="error-message">La contraseña es requerida.</small>
+            <small *ngIf="registerForm.get('password')?.errors?.['minlength']" class="error-message">La contraseña debe tener al menos 8 caracteres.</small>
+            <small *ngIf="registerForm.get('password')?.errors?.['passwordStrength']" class="error-message">Debe tener al menos una letra minúscula, una mayúscula, un número y un carácter especial.</small>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="imagen" class="form-label">URL de la Imagen</label>
+          <input type="text" class="form-control" id="imagen" placeholder="https://example.com/imagen.jpg" formControlName="imagen">
+          <div *ngIf="registerForm.get('imagen')?.invalid && registerForm.get('imagen')?.touched" class="text-danger">
+            <small *ngIf="registerForm.get('imagen')?.errors?.['pattern']" class="error-message">La URL de la imagen no es válida.</small>
+          </div>
+        </div>
+
+        <button type="submit" class="btn register-button" [disabled]="registerForm.invalid">Registrar</button>
+        <button type="submit" class="btn register-button" routerLink="/login">Cancelar</button>
+      </form>
+    </div>
+  </div>
+</div>

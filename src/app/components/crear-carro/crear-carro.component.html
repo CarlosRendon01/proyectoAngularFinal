@@ -1,0 +1,53 @@
+<h2 mat-dialog-title>Crear Carro</h2>
+<div mat-dialog-content class="form-container">
+  <form #carForm="ngForm">
+    <mat-form-field class="full-width">
+      <mat-label>Modelo</mat-label>
+      <input matInput [(ngModel)]="car.modelo" name="modelo" required>
+      <mat-error *ngIf="carForm.controls['modelo']?.invalid && carForm.controls['modelo']?.touched">
+        Modelo es requerido
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field class="full-width">
+      <mat-label>Agencia</mat-label>
+      <input matInput [(ngModel)]="car.agencia" name="agencia" required>
+      <mat-error *ngIf="carForm.controls['agencia']?.invalid && carForm.controls['agencia']?.touched">
+        Agencia es requerida
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field class="full-width">
+      <mat-label>Color</mat-label>
+      <input matInput [(ngModel)]="car.color" name="color" required>
+      <mat-error *ngIf="carForm.controls['color']?.invalid && carForm.controls['color']?.touched">
+        Color es requerido
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field class="full-width">
+      <mat-label>Precio</mat-label>
+      <input matInput [(ngModel)]="car.precio" name="precio" required pattern="^[0-9]+(\.[0-9]{1,2})?$">
+      <mat-error *ngIf="carForm.controls['precio']?.invalid && carForm.controls['precio']?.touched">
+        Precio es requerido y debe ser un número válido
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="full-width">
+      <mat-label>URL de la Imagen</mat-label>
+      <input matInput [(ngModel)]="car.imagen" name="imagen">
+      <mat-error *ngIf="carForm.controls['imagen']?.invalid && carForm.controls['imagen']?.touched">
+        URL de la imagen es requerido
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="full-width">
+      <mat-label>Descripción</mat-label>
+      <textarea matInput [(ngModel)]="car.descripcion" name="descripcion" required></textarea>
+      <mat-error *ngIf="carForm.controls['descripcion']?.invalid && carForm.controls['descripcion']?.touched">
+        La descripción es requerida
+      </mat-error>
+    </mat-form-field>
+  </form>
+</div>
+<div mat-dialog-actions class="action-buttons">
+  <button mat-raised-button color="warn" (click)="onCancel()">Cancelar</button>
+  <button mat-raised-button color="primary" (click)="onSave(carForm)" [disabled]="carForm.invalid">Guardar</button>
+</div>

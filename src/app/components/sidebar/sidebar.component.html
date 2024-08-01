@@ -1,0 +1,21 @@
+<div class="sidebar-content" id="sidebar">
+  <div class="sidebar-header">
+    <h3>
+      <i class="material-icons logo">storefront</i> Mis carros
+    </h3>
+    <button class="close-btn" (click)="closeSidebar()">☰</button>
+  </div>
+  <ul class="nav flex-column">
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/dashboard"><i class="material-icons">dashboard</i> <span>Dashboard</span></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/usuarios"><i class="material-icons">person</i> <span>Usuarios</span></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/carros"><i class="material-icons">directions_car</i> <span>Carros</span></a>
+    </li>
+  </ul>
+</div>
+
+<button class="open-btn" (click)="openSidebar()">☰</button>

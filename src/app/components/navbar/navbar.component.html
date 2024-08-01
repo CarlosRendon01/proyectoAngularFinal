@@ -1,0 +1,19 @@
+<mat-toolbar class="custom-toolbar">
+  <img src="https://images.vexels.com/media/users/3/224148/isolated/preview/93de80b810ad081d6d4bae216da5e4e5-logotipo-de-coche-deportivo-antiguo.png" alt="Logo" class="logo">
+  <span class="brand-name">Classic Car Hub</span>
+  <span class="spacer"></span>
+  <mat-menu #userMenu="matMenu">
+    <button mat-menu-item (click)="viewUser(user)">
+      <mat-icon>person</mat-icon>
+      <span>Ver Información del Usuario</span>
+    </button>
+    <button mat-menu-item (click)="logout()">
+      <mat-icon>exit_to_app</mat-icon>
+      <span>Cerrar Sesión</span>
+    </button>
+  </mat-menu>
+  <div class="user-info" mat-icon-button [matMenuTriggerFor]="userMenu">
+    <span class="user-name">{{ user?.nameUser }}</span>
+    <img [src]="user?.imagen" alt="User Image" class="user-icon">
+  </div>
+</mat-toolbar>

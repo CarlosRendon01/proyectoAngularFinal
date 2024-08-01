@@ -1,0 +1,46 @@
+body {
+  font-family: 'Georgia', serif;
+  color: #ffffff;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('/assets/fondoYa.png'); /* Asegúrate de que la ruta de la imagen sea correcta */
+  background-size: cover;
+  background-position: center;
+}
+
+.main-content {
+  margin-top: 64px; /* Ajusta este valor según la altura de tu navbar */
+  margin-left: 230px; /* Ajusta este valor según el ancho de tu sidebar */
+  transition: margin-left 0.3s ease;
+  height: calc(100vh - 64px); /* Ajusta la altura para que ocupe el espacio restante debajo del navbar */
+  background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #f5f5dc; /* Color beige para armonizar con el fondo del login */
+}
+
+.main-content.full-width {
+  margin-left: 0;
+}
+
+.welcome-message {
+  text-align: center;
+}
+
+.welcome-message h1 {
+  font-size: 3em;
+  font-family: 'Brush Script MT', cursive;
+  color: #8B4513; /* Color marrón similar al del login */
+  margin-bottom: 20px;
+}
+
+.welcome-gif {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}

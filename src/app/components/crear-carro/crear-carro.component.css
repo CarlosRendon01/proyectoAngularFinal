@@ -1,0 +1,27 @@
+.full-width {
+  width: 100%;
+}
+
+mat-form-field {
+  margin-bottom: 16px;
+}
+
+.form-container {
+  background: rgba(245, 245, 220, 0.9); /* Fondo similar al del login */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+mat-dialog-title {
+  text-align: center;
+  font-weight: bold;
+  font-family: 'Georgia', serif;
+  color: #8B4513; /* Color marrón similar al del login */
+}

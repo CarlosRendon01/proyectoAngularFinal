@@ -1,0 +1,44 @@
+mat-dialog-title {
+  font-family: 'Georgia', serif;
+  color: #8B4513; /* Color marrón similar al del login */
+}
+
+mat-dialog-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: rgba(245, 245, 220, 0.9); /* Fondo similar al del login */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.user-image {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+p {
+  margin: 5px 0;
+  font-family: 'Georgia', serif;
+  color: #3b4443;
+}
+
+strong {
+  color: #8B4513; /* Color marrón similar al del login */
+}
+
+mat-dialog-actions {
+  margin-top: 20px;
+}

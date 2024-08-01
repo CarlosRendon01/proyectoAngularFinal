@@ -1,0 +1,14 @@
+<h2 mat-dialog-title>Información de Usuario</h2>
+<mat-dialog-content>
+  <div class="user-info">
+    <img *ngIf="data.imagen" [src]="data.imagen" alt="User Image" class="user-image">
+    <img *ngIf="!data.imagen" src="default-image-url" alt="Default User Image" class="user-image">
+    <div>
+      <p><strong>Nombre:</strong> {{ data.nameUser }}</p>
+      <p><strong>Email:</strong> {{ data.email }}</p>
+    </div>
+  </div>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-raised-button color="primary" (click)="onClose()">Cerrar</button>
+</mat-dialog-actions>
